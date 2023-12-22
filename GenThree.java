@@ -3,22 +3,14 @@
  * prints them, and then prints the minimal number that was generated.
  */
 
-import java.util.Random;
-
 public class GenThree {
 	public static void main(String[] args) {
 		int a = Integer.parseInt(args[0]);
 		int b = Integer.parseInt(args[1]);
-		int res1 = (int)((Math.random() * (b - a)) + a );
-		int res2 = (int)((Math.random() * (b - a)) + a );
-		int res3 = (int)((Math.random() * (b - a)) + a );
-		int res = Math.min(res1, Math.min(res2, res3));
-
-		System.out.println(res1+"\n"+res2+"\n"+res3+"\nThe minimal generated number was "+res);
-
-		
-
-
-
+		int rand1 = (int)((Math.random() * (b - a)) + a );
+		int rand2 = (int)((Math.random() * (b - a)) + a );
+		int rand3 = (int)((Math.random() * (b - a)) + a );
+		int minimum = Math.min(rand1, Math.min(rand2, rand3));
+		System.out.println(rand1+"\n"+rand2+"\n"+rand3+"\nThe minimal generated number was "+minimum);
 	}
 }
